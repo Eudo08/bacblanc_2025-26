@@ -14,7 +14,7 @@ def vainqueur(election):
         if election[candidat] > nmax :
             nmax = election[candidat]
             vainqueur = candidat
-    liste_finale = [nom for nom in election if election[nom] == nmax]
+    liste_finale = [nom for nom in election if election[nom] == election[vainqueur]]
     return liste_finale
 
 Urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B', 'C']
