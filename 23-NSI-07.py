@@ -5,11 +5,12 @@ def traduire_romain(nombre) :
     """ Renvoie l'ecriture decimale du nombre donné en chiffres romains """
 
     if len(nombre) == 1:
-        return ...
+        return romains[nombre]
 
-    elif romains[nombre[0]] >= ... :
-        return romains[nombre[0]] + ...
+    elif romains[nombre[0]] >= romains[nombre [1]] :
+        return romains[nombre[0]] + romains [nombre[0:]]
     else:
-        return ...
+        return romains[nombre[0]] - romains [nombre[1]]
 
 
+print( traduire_romain("XIV"))
