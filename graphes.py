@@ -21,4 +21,14 @@ def matrice_vers_dico (matrice):
 
 
 
-print (matrice_vers_dico(matrice))
+# print (matrice_vers_dico(matrice))
+
+def dico_to_matrice (dico):
+	matrix = []
+	for key in dico.keys ():
+		matrix.append(len(dico.keys())*[0])
+		for elmt in dico[key]:
+			matrix [key][elmt]=1
+	return matrix
+
+print (dico_to_matrice(matrice_vers_dico(matrice)))
