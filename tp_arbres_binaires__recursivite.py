@@ -1,26 +1,7 @@
 # On commence par dérire un arbre à l'aide de dictionnaires python.
 # Pour cela on utilise la fonction node définie comme ci-après:
-
-# Définir un arbre à l'aide de dictionnaires imbriqués
-
-# Ecrire une fonction récursive qui calcule la profondeur d'un arbre binaire
-
-# Ecrire une fonction récursive qui décrit le parcours PREFIXE d'un arbre binaire
-
-# Ecrire une fonction récursive qui décrit le parcours INFIXE d'un arbre binaire
-
-# Ecrire une fonction récursive qui décrit le parcours SUFFIXE d'un arbre binaire
-
-# Ecrire une fonction récursive qui décrit le parcours EN LARGEUR d'un arbre binaire
-
-# Ecrire une fonction récursive qui dit si une valeur est dans un arbre binaire
-
-# Ecrire une fonction récursive qui dit si un arbre binaire est un de recherche
-
-
 def make_node (root, left, right):
     return {"r": root, "left": left, "right" : right}
-
 
 a = make_node (0)
 b = make_node (4)
@@ -34,5 +15,28 @@ i = make_node (17)
 j = make_node (21)
 k = make_node (19, i, j)
 A = make_node (15, h, k)
+# Définir un arbre à l'aide de dictionnaires imbriqués
+
+# Ecrire une fonction récursive qui calcule la hauteur d'un arbre binaire
+
+def height (tree) :
+    if tree == {} or tree == None:
+        return "C'EST VIDEEEEEEEEE"
+    else :
+        return 1 + max (height(tree ["left"]), \
+                               height (tree ["right"]))
+
+print (height (A))
 
 
+# Ecrire une fonction récursive qui décrit le parcours PREFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours INFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours SUFFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours EN LARGEUR d'un arbre binaire
+
+# Ecrire une fonction récursive qui dit si une valeur est dans un arbre binaire
+
+# Ecrire une fonction récursive qui dit si un arbre binaire est un de recherche
