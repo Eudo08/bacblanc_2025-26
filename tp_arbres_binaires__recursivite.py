@@ -1,0 +1,38 @@
+# On commence par dérire un arbre à l'aide de dictionnaires python.
+# Pour cela on utilise la fonction node définie comme ci-après:
+
+# Définir un arbre à l'aide de dictionnaires imbriqués
+
+# Ecrire une fonction récursive qui calcule la profondeur d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours PREFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours INFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours SUFFIXE d'un arbre binaire
+
+# Ecrire une fonction récursive qui décrit le parcours EN LARGEUR d'un arbre binaire
+
+# Ecrire une fonction récursive qui dit si une valeur est dans un arbre binaire
+
+# Ecrire une fonction récursive qui dit si un arbre binaire est un de recherche
+
+
+def make_node (root, left, right):
+    return {"r": root, "left": left, "right" : right}
+
+
+a = make_node (0)
+b = make_node (4)
+c = make_node (3, a, b)
+d = make_node (6)
+e = make_node (9)
+f = make_node (10, e, None)
+g = make_node (7, d, f)
+h = make_node (5, c, g)
+i = make_node (17)
+j = make_node (21)
+k = make_node (19, i, j)
+A = make_node (15, h, k)
+
+
