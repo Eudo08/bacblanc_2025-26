@@ -1,3 +1,4 @@
+import random
 
 def get_max_recursive (numbers) :
     if len(numbers) == 0 :
@@ -9,3 +10,27 @@ def get_max_recursive (numbers) :
     
 
 print(get_max_recursive([7, 9, 10, 9999, 0]))
+
+
+
+
+def quick_sort(v):
+    left = []
+    right = []
+    milieu = []
+    if len(v) == 1 or len(v) == 0:
+        return v
+    else:
+        pivot = random.randint(0, len(v)-1)
+        for i in range(len(v)):
+            if v[i] < v[pivot]:
+                left.append(v[i])
+            elif v[i] == v[pivot]:
+                milieu.append(v[i])
+            else:
+                right.append(v[i])
+
+        return quick_sort(left) + milieu + quick_sort(right)
+
+
+print(quick_sort([6, 6, 5, 6, 6, 6]))
